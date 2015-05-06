@@ -67,7 +67,7 @@ Comment[pt]=Navegue na Internet
 Comment[pt_BR]=Navegue na Internet
 Comment[sk]=Prehliadanie internetu
 Comment[sv]=Surfa på webben
-Exec=firefox-{1} %u
+Exec={1} %u
 Icon=firefox-{2}
 Terminal=false
 Type=Application
@@ -137,7 +137,8 @@ def create_desktop_file(channel):
     _mkdir(desktop_dir)
     desktop_file = os.path.join(LOCALDIR, desktop_dir, 'firefox-%s.desktop' % channel)
     f = open(desktop_file, 'w')
-    f.write(DESKTOP.format(channel.capitalize(), channel, channel))
+    f.write(DESKTOP.format(
+        channel.capitalize(), os.path.join(LOCALFOXDIR, channel, 'firefox'), channel))
 
 def _mkdir(dirname):
     try:

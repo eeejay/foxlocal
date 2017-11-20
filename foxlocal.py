@@ -114,7 +114,8 @@ def link_icons(channel):
         '16x16': 'browser/chrome/icons/default/default16.png',
         '32x32': 'browser/chrome/icons/default/default32.png',
         '48x48': 'browser/chrome/icons/default/default48.png',
-        '128x128': 'browser/icons/mozicon128.png'
+        '64x64': 'browser/chrome/icons/default/default64.png',
+        '128x128': 'browser/chrome/icons/default/default128.png'
     }
     for size in icons:
         destdir = os.path.join(LOCALDIR, 'share/icons/hicolor/%s/apps' % size)
